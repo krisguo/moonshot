@@ -71,7 +71,19 @@ print(repr(serializer))
 
 
 
+
+
 # install list for heroku
 # pip install httpie
 # http http://127.0.0.1:8000/questions/
 # http http://127.0.0.1:8000/questions/2/
+
+
+
+# PART 2
+# http http://127.0.0.1:8000/questions/ Accept:application/json  # Request JSON
+# http http://127.0.0.1:8000/questions/ Accept:text/html         # Request HTML
+# Or by appending a format suffix:
+#
+# http http://127.0.0.1:8000/questions.json  # JSON suffix
+# http http://127.0.0.1:8000/questions.api   # Browsable API suffix
