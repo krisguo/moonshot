@@ -131,4 +131,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissions',
     ]
+    ,
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
+
 }
