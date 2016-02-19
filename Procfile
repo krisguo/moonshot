@@ -1,1 +1,1 @@
-web: gunicorn moonshot:app
+web: gunicorn moonshot.wsgi --log-file -
