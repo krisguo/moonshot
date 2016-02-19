@@ -1,1 +1,1 @@
-web: gunicorn moonshotquestionapi:app
+web: gunicorn app:app
