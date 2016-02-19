@@ -27,14 +27,14 @@ class QuestionTest(APITestCase):
 
         #CREATE
         url = reverse("questions")
-        data = {"title": "Do you like programming?", "description": "Lorem", "author": 1}
+        data = {"title": "Do you like programming?", "description": "Lorem"}
         self.client.post('/questions', data, dataformat='json')
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
         #READ
         url = '/questions/1/'
-        data = {"id": 1, "title": "Do you like programming?", "description": "Lorem", "author": 1}
+        data = {"id": 1, "title": "Do you like programming?", "description": "Lorem"}
         response = self.client.get(url, data, format='json')
         self.assertEquals(response.data, data)
         self.assertEqual(Question.objects.count(), 1)
@@ -43,9 +43,9 @@ class QuestionTest(APITestCase):
 
         #UPDATE
         url = '/questions/1/'
-        data = {"title": "Do you like Python?", "description": "Ipsum", "author": 1}
+        data = {"title": "Do you like Python?", "description": "Ipsum"}
         self.client.put('/questions/1/', data, dataformat='json')
-        data = {"id": 1, "title": "Do you like Python?", "description": "Ipsum", "author": 1}
+        data = {"id": 1, "title": "Do you like Python?", "description": "Ipsum"}
         response = self.client.get(url, data, format='json')
         self.assertEquals(response.data, data)
 
