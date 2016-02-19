@@ -1,1 +1,1 @@
-web: gunicorn murmuring-reef-56934:app
+gunicorn moonshot:app
