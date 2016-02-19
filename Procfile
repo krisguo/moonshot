@@ -1,1 +1,1 @@
-gunicorn moonshot:app
+web: gunicorn moonshot:app
