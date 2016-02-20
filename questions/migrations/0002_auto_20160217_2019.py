@@ -11,13 +11,13 @@ class Migration(migrations.Migration):
         ('questions', '0001_initial'),
     ]
 
-    operations = [
-        migrations.AlterModelOptions(
-            name='question',
-            options={'ordering': ['id']},
-        ),
-        migrations.RemoveField(
-            model_name='question',
-            name='author',
-        ),
-    ]
+    # operations = [
+    #     migrations.AlterModelOptions(
+    #         name='question',
+    #         options={'ordering': ['id']},
+    #     ),
+    #     migrations.RemoveField(
+    #         model_name='question',
+    #         name='author',
+    #     ),
+    # ]
