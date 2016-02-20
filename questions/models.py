@@ -14,8 +14,8 @@ from django.contrib.auth.models import User
 
 class Question(models.Model):
     title = models.CharField(max_length=100, blank=True, default='')
-    description = models.TextField()
-    author = models.ForeignKey('auth.User', related_name='questions', default='')
+    description = models.TextField(default='')
+    author = models.ForeignKey('auth.User', related_name='questions', default='', null=True)
 
 
     class Meta:
